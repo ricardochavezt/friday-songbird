@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import songbirdPic from './logo_songbird.jpg'
+import rssIcon from './rss_icon.svg'
+// Icono: RSS by Javi Ayala (https://thenounproject.com/javi_al) from The Noun Project (https://thenounproject.com/)
 
 const Sidebar = ({ siteTitle }) => (
   <div className="sidebar">
@@ -21,6 +23,9 @@ const Sidebar = ({ siteTitle }) => (
                   Un proyecto de <a href="https://twitter.com/ricardochavezt">@ricardochavezt</a>.
               </p>
               <p><Link to="/archive">Archivo de canciones</Link></p>
+              <p>
+                  <Link to="/rss.xml"><img alt="RSS" src={rssIcon} style={{width: 24}} /> Feed RSS</Link>
+              </p>
           </div>
       </div>
   </div>
