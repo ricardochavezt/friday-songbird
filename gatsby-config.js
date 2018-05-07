@@ -32,7 +32,7 @@ module.exports = {
                                 }
                                 let contenidoHTML = node.contenidoHTML;
                                 if (node.spotify_uri) {
-                                    contenidoHTML = `<p><iframe src="https://open.spotify.com/embed?uri=${post.spotify_uri}" width="300" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe></p>` + contenidoHTML;
+                                    contenidoHTML = `<p><iframe src="https://open.spotify.com/embed?uri=${node.spotify_uri}" width="300" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe></p>` + contenidoHTML;
                                 }
                                 if (node.album) {
                                     contenidoHTML = `<p>Album: ${node.album}</p>` + contenidoHTML;
