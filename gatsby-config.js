@@ -43,7 +43,7 @@ module.exports = {
                                     description: contenidoHTML,
                                     url: site.siteMetadata.siteUrl + node.slug,
                                     guid: site.siteMetadata.siteUrl + node.slug,
-                                    custom_elements: [{"content:encoded": node.contenidoHTML}]
+                                    custom_elements: [{"content:encoded": contenidoHTML}]
                                 };
                             });
                         },
