@@ -26,6 +26,17 @@ module.exports = {
                     {
                         serialize: ({query: {site, allPost}}) => {
                             return allPost.edges.map(({node}) => {
+                                let titulo = node.titulo;
+                                if (node.artista) {
+                                    titulo = node.artista + ' - ' + titulo;
+                                }
+                                let contenidoHTML = node.contenidoHTML;
+                                if (node.spotify_uri) {
+                                    contenidoHTML = `<p><iframe src="https://open.spotify.com/embed?uri=${post.spotify_uri}" width="300" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe></p>` + contenidoHTML;
+                                }
+                                if (node.album) {
+                                    contenidoHTML = `<p>Album: ${node.album}</p>` + contenidoHTML;
+                                }
                                 return {
                                     title: node.titulo,
                                     date: node.fecha_publicacion,

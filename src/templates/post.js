@@ -34,9 +34,9 @@ const PostPage = ({data, pathContext}) => {
                 <div className="post">
                     <h1 className="post-title"><a href="#">{title}</a></h1>
                     <span className="post-date">{post.fecha_publicacion}</span>
-                    <p>
+                    {post.spotify_uri && (<p>
                         <iframe src={"https://open.spotify.com/embed?uri="+post.spotify_uri} width="300" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                    </p>
+                    </p>)}
                     {post.album && (<p>
                         Album: {post.album}
                     </p>)}
