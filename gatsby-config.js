@@ -38,9 +38,9 @@ module.exports = {
                                     contenidoHTML = `<p>Album: ${node.album}</p>` + contenidoHTML;
                                 }
                                 return {
-                                    title: node.titulo,
+                                    title: titulo,
                                     date: node.fecha_publicacion,
-                                    description: node.contenidoHTML,
+                                    description: contenidoHTML,
                                     url: site.siteMetadata.siteUrl + node.slug,
                                     guid: site.siteMetadata.siteUrl + node.slug,
                                     custom_elements: [{"content:encoded": node.contenidoHTML}]
