@@ -1,7 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Helmet from 'react-helmet'
 
 const PostPage = ({data, pathContext}) => {
+  console.log(data);
     var post = data.post;
     var title = post.titulo;
     if (post.artista) {
@@ -30,6 +32,7 @@ const PostPage = ({data, pathContext}) => {
     }
     return (
         <div>
+          <Helmet title={title+' - '+data.site.siteMetadata.title} />
             <div className="posts">
                 <div className="post">
                     <h1 className="post-title"><a href="#">{title}</a></h1>
@@ -62,5 +65,10 @@ query postQuery($id: String!) {
     contenidoHTML
     fecha_publicacion(formatString:"DD MMMM YYYY")
     spotify_uri
+  }
+  site {
+    siteMetadata {
+      title
+    }
   }
 }`
