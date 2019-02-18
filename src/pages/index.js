@@ -34,9 +34,12 @@ const IndexPage = ({data}) => {
                 <div className="post">
                     <h1 className="post-title"><a href="#">{title}</a></h1>
                     <span className="post-date">{post.fecha_publicacion}</span>
-                    <p>
+                    {post.spotify_uri && (<p>
                         <iframe src={"https://open.spotify.com/embed?uri="+post.spotify_uri} width="300" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                    </p>
+                    </p>)}
+                    {post.youtube_url && (<p className="video-container">
+                        <iframe width="560" height="315" src={post.youtube_url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    </p>)}
                     {post.album && (<p>
                         Album: {post.album}
                     </p>)}
@@ -64,6 +67,7 @@ query frontPostQuery {
         contenidoHTML
         fecha_publicacion(formatString:"DD MMMM YYYY")
         spotify_uri
+        youtube_url
       }
       next {
         slug

@@ -34,6 +34,9 @@ module.exports = {
                                 if (node.spotify_uri) {
                                     contenidoHTML = `<p><iframe src="https://open.spotify.com/embed?uri=${node.spotify_uri}" width="300" height="80" frameBorder="0" allowTransparency="true" allow="encrypted-media"></iframe></p>` + contenidoHTML;
                                 }
+                                if (node.youtube_url) {
+                                    contenidoHTML = `<p><iframe width="560" height="315" src=${node.youtube_url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>` + contenidoHTML;
+                                }
                                 if (node.album) {
                                     contenidoHTML = `<p>Album: ${node.album}</p>` + contenidoHTML;
                                 }
@@ -57,6 +60,7 @@ module.exports = {
                                         contenidoHTML
                                         fecha_publicacion
                                         spotify_uri
+                                        youtube_url
                                         slug
                                     }
                                 }
