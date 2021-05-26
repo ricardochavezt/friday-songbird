@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 import songbirdPic from './logo_songbird.jpg'
 import rssIcon from './rss_icon.svg'
