@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 
 const PostPage = ({data, pageContext}) => {
-  console.log(data);
     var post = data.post;
     var title = post.titulo;
     if (post.artista) {
