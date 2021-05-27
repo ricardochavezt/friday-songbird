@@ -1,23 +1,26 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
 
 const ArchivePage = ({data}) => {
     var posts = data.allPost.edges.map(edge => edge.node);
     return (
-        <div>
+        <Layout>
+          <div>
             <div className="page">
-                <h1 className="page-title">Archivo de canciones</h1>
-                <span className="post-date">Todas las canciones publicadas a la fecha (las más recientes primero)</span>
-                {posts.map(post => {
-                     var titulo = post.artista ? `${post.artista} - ${post.titulo}` : post.titulo;
-                     return (
-                         <p>
-                             <h3 className="post-title"><Link to={post.slug}>{post.fecha_publicacion}: {titulo}</Link></h3>
-                         </p>
-                     );
-                 })}
+              <h1 className="page-title">Archivo de canciones</h1>
+              <span className="post-date">Todas las canciones publicadas a la fecha (las más recientes primero)</span>
+              {posts.map(post => {
+                  var titulo = post.artista ? `${post.artista} - ${post.titulo}` : post.titulo;
+                  return (
+                      <p>
+                        <h3 className="post-title"><Link to={post.slug}>{post.fecha_publicacion}: {titulo}</Link></h3>
+                      </p>
+                  );
+              })}
             </div>
-        </div>
+          </div>
+        </Layout>
     );
 };
 

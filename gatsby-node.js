@@ -12,8 +12,8 @@ const crypto = require('crypto');
 const marked = require('marked');
 const path = require('path');
 
-exports.sourceNodes = ({ boundActionCreators }) => {
-    const { createNode } = boundActionCreators;
+exports.sourceNodes = ({ actions }) => {
+    const { createNode } = actions;
     const apiURL = process.env.GATSBY_API_URL || 'http://friday-songbird-admin.herokuapp.com/canciones';
     return fetch(apiURL)
         .then(res => res.json())
@@ -35,8 +35,8 @@ exports.sourceNodes = ({ boundActionCreators }) => {
         });
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-    const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+    const { createPage } = actions;
     return new Promise((resolve, reject) => {
         graphql(`{
         allPost (sort: {fields: [fecha_publicacion], order: DESC}){
