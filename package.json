@@ -12,7 +12,7 @@
     "gatsby-plugin-typography": "^3.6.0",
     "isomorphic-fetch": "^3.0.0",
     "marked": "^0.3.19",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-helmet": "^6.1.0",
