@@ -1,7 +1,7 @@
 # friday-songbird
 
 Este repositorio contiene las fuentes para generar el contenido del blog Friday Songbird,
-que actualmente se encuentra en <http://ctrl-c.club/~ricardo/friday-songbird/>
+que actualmente se encuentra en ~<http://ctrl-c.club/~ricardo/friday-songbird/>~ <https://www.ricardochavezt.com/friday-songbird>
 
 Estamos usando el genial proyecto [Gatsby](https://www.gatsbyjs.org/).
 
