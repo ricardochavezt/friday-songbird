@@ -2,9 +2,9 @@ module.exports = {
     siteMetadata: {
         title: 'Friday Songbird',
         description: 'Todos los viernes una canción',
-        siteUrl: 'http://www.ctrl-c.club/~ricardo/friday-songbird'
+        siteUrl: 'http://www.ricardochavezt.com/friday-songbird'
     },
-    pathPrefix: '/~ricardo/friday-songbird',
+    pathPrefix: '/friday-songbird',
     plugins: [
         'gatsby-plugin-react-helmet',
         {
